@@ -115,7 +115,7 @@ want to eat the performance cost, you don't have to:
         this.context = this.canvas.getContext('2d');
         this.context.fillStyle = 'black';
         if (this.canvas) {
-          self._resizeWindow();
+          this._resizeWindow();
         } else {
           console.log('attampted to resize before canvas is defined.');
         }
@@ -167,7 +167,7 @@ want to eat the performance cost, you don't have to:
        */
       start: function () {
         if (this.canvas) {
-          self._resizeWindow();
+          this._resizeWindow();
         } else {
           console.log('attampted to resize before canvas is defined.');
         }
