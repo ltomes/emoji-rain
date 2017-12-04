@@ -306,11 +306,11 @@ want to eat the performance cost, you don't have to:
       _scaleCanvas: function () {
         // Finally query the various pixel ratios.
         var devicePixelRatio = window.devicePixelRatio || 1;
-        var backingStoreRatio = this.context.webkitBackingStorePixelRatio ||
+        var backingStoreRatio = (this.context) ? (this.context.webkitBackingStorePixelRatio ||
           this.context.mozBackingStorePixelRatio ||
           this.context.msBackingStorePixelRatio ||
           this.context.oBackingStorePixelRatio ||
-          this.context.backingStorePixelRatio || 1;
+          this.context.backingStorePixelRatio || 1) : 1;
 
         var ratio = devicePixelRatio / backingStoreRatio;
 
